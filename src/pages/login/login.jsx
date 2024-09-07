@@ -14,38 +14,16 @@ export default function Login() {
         loginGoogleWithPopUp();
     }, [loginGoogleWithPopUp]);
 
-    const handlelogout = useCallback(() => {
-        logout();
-    },[logout] );
-
     useEffect(() => {
         observeAuthState();
 
     }, [observeAuthState,]);
 
-    useEffect(()=>{
-        if(user){
-            const newUser ={
-                email: user.email || ' ',
-                displayName: user.displayName || ' ',
-                photoUrl: user.photoUrl || ' ',
-            };
-            userDAO.createUser(newUser);
-            navigate("/quiz");
-        }
-    }, [user, navigate]);
 
     return (
         <div className="container-login">
-            {user ? (
-                <>
-                <p className="welcome-text">Bienvenido,{user.displayName}</p>
-                <button onClick={handlelogout}>logout</button>
-                </>
-            ) : (
-                <button onClick={handleLogin}> Iniciar sesion. </button>
-            )}
-            
+            <img className="container-login-logo" src="/earth.png" alt="" />
+            <button onClick={handleLogin}> Iniciar sesion. </button>
         </div>
     )
 } 
