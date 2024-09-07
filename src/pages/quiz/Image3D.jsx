@@ -3,12 +3,19 @@ import React, { useRef } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { TextureLoader } from 'three';
-import { useLoader } from '@react-three/fiber';
+import { useLoader, useFrame } from '@react-three/fiber';
 
 const Image3D = ({ imageUrl }) => {
   const texture = useLoader(TextureLoader, imageUrl);
   const controlsRef = useRef();
-
+  const logoRef = useRef(null);
+  
+  //useFrame((state,delta)=>{
+    //if(logoRef.current){
+      //const elapsedTime = state.clock.getElapsedTime();
+      //logoRef.current.position.x = Math.cos(elapsedTime) * 2;
+    //}
+  //})
   return (
     <Canvas
       onCreated={({ camera }) => {
@@ -24,7 +31,7 @@ const Image3D = ({ imageUrl }) => {
         autoRotate={false}  
         autoRotateSpeed={0} 
       />
-      <mesh>
+      <mesh ref={logoRef}>
         <planeGeometry args={[5, 5]} /> 
         <meshBasicMaterial map={texture} />
       </mesh>
