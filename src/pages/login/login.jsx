@@ -23,7 +23,7 @@ export default function Login() {
     return (
         <div className="container-login">
             <img className="container-login-logo" src="/earth.png" alt="" />
-            <button onClick={handleLogin}> Iniciar sesion. </button>
+            <button onClick={handleLogin}> Iniciar sesion </button>
         </div>
     )
 } 
