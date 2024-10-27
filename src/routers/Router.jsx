@@ -4,6 +4,8 @@ import Quiz from '../pages/quiz/Quiz.jsx'
 import Home from '../pages/home/Home.jsx'
 import PublicRoute from './PublicRoute.jsx';
 import ProtectedRoute from './ProtectedRoute.jsx';
+import WaterScarcity from '../pages/WaterScarcity/WaterScarcity.jsx';
+import ReduceConsumption from '../pages/reduceConsumption/ReduceConsumption.jsx';
 
 const Router = createBrowserRouter([
     {
@@ -29,6 +31,22 @@ const Router = createBrowserRouter([
            <Home/>
         </ProtectedRoute>
         )
+    },
+    {
+      path:'/water-scarcity',
+      element:(
+        <ProtectedRoute>
+           <WaterScarcity/>
+        </ProtectedRoute>
+        )
+    },
+    {
+      path: '/reduce-consumption',
+      element:(
+        <ProtectedRoute>
+          <ReduceConsumption/>
+        </ProtectedRoute>
+      )
     }
   ]);
 

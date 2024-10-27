@@ -14,6 +14,8 @@ const Quiz = () => {
         logout();
     },[logout] );
 
+
+
     // const onHandleButtonNext = useCallback(() => {
     //     incrementQuizProgress();
     // }, [incrementQuizProgress]);
