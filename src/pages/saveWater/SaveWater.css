@@ -1,0 +1,30 @@
+.save-water-page{
+    background-color: #AFCBFF;
+    min-height: 92vh; /* Asegura que ocupe al menos la altura de la ventana */
+}
+
+.water-save{
+    color: black;
+    font-size: large;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+}
+
+.watersave-intro{
+    color: black;
+    font-size: large;
+    font-family:Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+
+.watersave button{
+    color: white;
+    font-size: 16px;
+    background-color: #0d09fa;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+}

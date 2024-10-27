@@ -6,6 +6,7 @@ import PublicRoute from './PublicRoute.jsx';
 import ProtectedRoute from './ProtectedRoute.jsx';
 import WaterScarcity from '../pages/WaterScarcity/WaterScarcity.jsx';
 import ReduceConsumption from '../pages/reduceConsumption/ReduceConsumption.jsx';
+import SaveWater from '../pages/saveWater/SaveWater.jsx';
 
 const Router = createBrowserRouter([
     {
@@ -45,6 +46,15 @@ const Router = createBrowserRouter([
       element:(
         <ProtectedRoute>
           <ReduceConsumption/>
+        </ProtectedRoute>
+      )
+    },
+
+    {
+      path: '/water-savings',
+      element:(
+        <ProtectedRoute>
+          <SaveWater />
         </ProtectedRoute>
       )
     }

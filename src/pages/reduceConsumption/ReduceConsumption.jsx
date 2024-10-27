@@ -8,13 +8,18 @@ import Header from '../../component/Header';
 const ReduceConsumption = () => {
     const navigate = useNavigate();
     
-    const handleGoToWaterScarcity = () => {
+    const handleGoSaveWater = () => {
+        navigate('/water-savings'); // Cambia esta ruta si es diferente en tu configuración
+    };
+
+    const handleWaterScarcity = () => {
         navigate('/water-scarcity'); // Cambia esta ruta si es diferente en tu configuración
     };
 
     return (
         <>
         <Header />
+        <div className='recudeConsumption-page'>
         <Canvas>
             <Html
                 wrapperClass='tittle-text'
@@ -42,17 +47,30 @@ const ReduceConsumption = () => {
             </Html>
 
             <Html
-                wrapperClass='waterScarcity'
+                wrapperClass='saveWater'
                 center
                 distanceFactor={7}
                 transform
                 position={[5, 3, 0]}
             >
-            <button onClick={handleGoToWaterScarcity}>
+            <button onClick={handleGoSaveWater}>
                     Siguiente
                 </button>
             </Html>
+
+            <Html
+                wrapperClass='scarcityWater'
+                center
+                distanceFactor={7}
+                transform
+                position={[-7.7, 3, 0]}
+            >
+            <button onClick={handleWaterScarcity}>
+                    Atras
+                </button>
+            </Html>
         </Canvas>
+        </div>
         </>
     );
 }

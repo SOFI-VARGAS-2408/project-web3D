@@ -10,10 +10,10 @@ const Header = ()=> {
                         <Link to= "/home">Inicio</Link>
                     </li>
                     <li>
-                        <Link to = "/water-scarcity">Escasez de Agua</Link>
+                        <Link to = "/water-pollution">Contaminacion del Agua</Link>
                     </li>
                     <li>
-                        <Link to = "/water-pollution">Contaminacion del Agua</Link>
+                        <Link to = "/water-scarcity">Escasez de Agua</Link>
                     </li>
                     <li>
                         <Link to = "/ocean-acidification">Acidificacion del Oceano</Link>
