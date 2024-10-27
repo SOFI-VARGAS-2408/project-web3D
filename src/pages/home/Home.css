@@ -1,3 +1,8 @@
+.container {
+    display: flex; /* O display: flex; flex-direction: row; */
+    width: 100%; /* O cualquier tamaño que desees */
+    height: 100vh; /* Asegúrate de que ocupe toda la altura si es necesario */
+}
 .container-left{
     width: 50%;
     display: flex;

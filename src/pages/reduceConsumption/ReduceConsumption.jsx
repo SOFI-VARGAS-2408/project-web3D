@@ -3,6 +3,7 @@ import { Html } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import { useNavigate } from 'react-router-dom';
 import "./ReduceConsumption.css";
+import Header from '../../component/Header';
 
 const ReduceConsumption = () => {
     const navigate = useNavigate();
@@ -12,6 +13,8 @@ const ReduceConsumption = () => {
     };
 
     return (
+        <>
+        <Header />
         <Canvas>
             <Html
                 wrapperClass='tittle-text'
@@ -46,10 +49,11 @@ const ReduceConsumption = () => {
                 position={[5, 3, 0]}
             >
             <button onClick={handleGoToWaterScarcity}>
-                    Ir a Escasez de Agua
+                    Siguiente
                 </button>
             </Html>
         </Canvas>
+        </>
     );
 }
 

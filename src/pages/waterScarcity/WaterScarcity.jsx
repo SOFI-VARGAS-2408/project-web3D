@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './WaterScarcity.css';
 import { Html } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
+import Header from '../../component/Header';
 
 const WaterScarcity = () => {
     const navigate = useNavigate();
@@ -12,13 +13,14 @@ const WaterScarcity = () => {
     }, [navigate]);
 
     const buttons = [
-        { label: 'Volver al Inicio', onClick: () => handleNavigation('/home'), position: [6, 3, 0] },
         { label: 'Reducir el Consumo del Agua', onClick: () => handleNavigation('/reduce-consumption'), position: [4, -1.2, 0] },
         { label: 'Ahorro de Agua al Usar la Lavadora', onClick: () => handleNavigation('/water-savings'), position: [4, -2.2, 0] },
         { label: 'Gráficos Interactivos', onClick: () => handleNavigation('/interactive-chars'), position: [4, -3.2, 0] },
     ];
 
     return (
+        <>
+        <Header />
         <div className='water-scarcity-page'>
             <Canvas>
                 <Html wrapperClass='water-text' center distanceFactor={9} transform position={[-5, 2, 0]}>
@@ -53,6 +55,7 @@ const WaterScarcity = () => {
                 ))}
             </Canvas>
         </div>
+        </>
     );
 };
 

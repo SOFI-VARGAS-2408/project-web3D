@@ -28,7 +28,7 @@ const Router = createBrowserRouter([
       path:'/home',
       element:(
         <ProtectedRoute>
-           <Home/>
+           <Home />
         </ProtectedRoute>
         )
     },
@@ -36,7 +36,7 @@ const Router = createBrowserRouter([
       path:'/water-scarcity',
       element:(
         <ProtectedRoute>
-           <WaterScarcity/>
+           <WaterScarcity />
         </ProtectedRoute>
         )
     },

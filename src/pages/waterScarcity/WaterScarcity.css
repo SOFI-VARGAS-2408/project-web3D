@@ -26,7 +26,7 @@ body {
 .intro-water, .water-text, .back-to-quiz-button, .interactice-chars, .practical-tips, .reduce-comsumption, .water-scarcity-page {
     background-color: rgba(0, 0, 0, 0.18); 
     color: #ffffff; 
-    border-radius: 10px;
+    border-radius: 0px;
 
 }
 .intro-water {
@@ -43,19 +43,6 @@ body {
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-style: italic;
 }
-
-.back-to-quiz-button {
-    background-color: rgb(3, 3, 243);
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    width: 200px; 
-    display: inline-block; 
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-style: italic;
-}
-
 .reduce-comsumption{
     background-color: rgb(20, 39, 211);
     margin-top: 20px;

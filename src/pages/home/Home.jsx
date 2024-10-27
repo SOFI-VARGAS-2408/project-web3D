@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom"; // Asegúrate de importar useNav
 import "./Home.css";
 import { getDocs, query, where } from "firebase/firestore";
 import UserDAO from "../../daos/userDAO";
+import Header from "../../component/Header";
 
 const Home = () => {
   const { user, logout } = useAuthStore();
@@ -38,13 +39,13 @@ const Home = () => {
   }, [navigate]);
 
   return (
+    <>
+    <Header />
     <div className="container">
       <div className="container-left">
         <h1 className="container-left-welcome">¡Hola! {user.displayName}</h1>
         <p className="container-left-slogan">Bienvenido a innovaVerde,</p>
         <p className="container-left-slogan">"Hasta la última gota"</p>
-        <button onClick={handleWaterScarcity}>Escasez de agua.</button>
-        <br />
         <button onClick={handlelogout}>Cerrar Sesión</button>
       </div>
       <Canvas>
@@ -55,6 +56,7 @@ const Home = () => {
         </PresentationControls>
       </Canvas>
     </div>
+    </>
   );
 }
 
