@@ -10,10 +10,10 @@ body,
   display: flex;
   height: 100vh;
   justify-content: center;
-  background-color: #98b3ff;
+  background-color: #BFF4FF;
 }
 
-button {
+/* button {
   padding: 10px 20px;
   font-size: medium;
   color: #fff;
@@ -28,4 +28,4 @@ button {
 button:hover {
   transition: 0.3s;
   transform: scale(1.1);
-}
+} */

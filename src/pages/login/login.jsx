@@ -4,6 +4,7 @@ import useAuthStore from "../../stores/use-auth-store"
 import { useEffect } from "react"
 import userDAO from "../../daos/userDAO";
 import { useNavigate } from "react-router-dom";
+import Button from "../../components/Button/Button";
 
 export default function Login() {
 
@@ -23,7 +24,7 @@ export default function Login() {
     return (
         <div className="container-login">
             <img className="container-login-logo" src="/earth.png" alt="" />
-            <button onClick={handleLogin}> Iniciar sesion </button>
+            <Button onClick={handleLogin} text={"Iniciar Sesion"}/>
         </div>
     )
 } 
