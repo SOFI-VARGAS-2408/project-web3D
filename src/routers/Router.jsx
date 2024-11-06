@@ -5,6 +5,7 @@ import Home from '../pages/home/Home.jsx'
 import PublicRoute from './PublicRoute.jsx';
 import ProtectedRoute from './ProtectedRoute.jsx';
 import Start from '../pages/Start/Start.jsx';
+import Pollution from '../pages/pollution/Pollution.jsx';
 
 const Router = createBrowserRouter([
     {

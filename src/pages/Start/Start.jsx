@@ -4,6 +4,7 @@ import ButtonLogOut from "../../components/ButtonLogOut/ButtonLogOut"
 import "./Start.css"
 import { Trash } from "../../components/Trash/Trash"
 import { OrbitControls } from "@react-three/drei"
+import { Link } from "react-router-dom"
 const Start = () =>{
     return (
         <>
@@ -16,7 +17,9 @@ const Start = () =>{
                 <directionalLight position={[10, 10, 10]} intensity={10} />
                 <Trash position={[-1.5,0,0]} scale={0.8 } rotation={[0,2,0]}/>
               </Canvas>
-              <Button text={"Contaminacion"}/>
+              <Link to={"/pollution"}>
+                <Button text={"Contaminacion"}/>
+              </Link>
             </div>
             <div className="container-options-option">
               <Button text={"Escasez"}/>
