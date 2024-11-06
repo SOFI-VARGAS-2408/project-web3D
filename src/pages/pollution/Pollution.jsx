@@ -1,11 +1,11 @@
 import "./Pollution.css"
 import { Canvas } from "@react-three/fiber";
 import { House3D } from "../../components/House3D/House3D";
-import { OrbitControls, Sky, Text } from "@react-three/drei";
+import { Loader, OrbitControls, Sky, Text } from "@react-three/drei";
 import { Lapras3D } from "../../components/Lapras3D/Lapras3D";
 import { Sign3D } from "../../components/Sign3D/Sign3D";
 import Raindrop from "../../components/Raindrop/Raindrop";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 
 const Pollution = () => {
 
@@ -55,6 +55,7 @@ const Pollution = () => {
           shadow-mapSize-height={2048}
           shadow-normalBias={0.5}
         />
+        <Suspense fallback={null}>
         <Sign3D onClick={openSignModal} onPointerOver={handlePointerOver} onPointerOut={handlePointerOut} scale={0.02} position={[-1.6, -0.5, 2]} rotation={[0, 0, 0]} />
         <Text
           position={[-1.56, 0, 2.1]}
@@ -66,6 +67,7 @@ const Pollution = () => {
         </Text>
         <House3D scale={0.3} rotation={[0, 4.75, 0]} />
         <Lapras3D scale={0.005} position={[1, -0.5, 1]} rotation={[0, -0.5, 0]} />
+          </Suspense>
         <OrbitControls
           maxPolarAngle={Math.PI * 0.4}
           minPolarAngle={Math.PI * 0.3}
@@ -73,6 +75,7 @@ const Pollution = () => {
           minAzimuthAngle={-Math.PI * 0.25}
         />
       </Canvas>
+      <Loader />
       <Raindrop isOpen={isOpen} onClose={closeSignModal}/>
       </>
   );
