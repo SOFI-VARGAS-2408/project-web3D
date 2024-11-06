@@ -32,7 +32,7 @@ const Pollution = () => {
   };
 
   return (
-      <>
+    <>
       <Canvas shadows camera={cameraSettings}>
         <Sky
           distance={450000}
@@ -56,28 +56,28 @@ const Pollution = () => {
           shadow-normalBias={0.5}
         />
         <Suspense fallback={null}>
-        <Sign3D onClick={openSignModal} onPointerOver={handlePointerOver} onPointerOut={handlePointerOut} scale={0.02} position={[-1.6, -0.5, 2]} rotation={[0, 0, 0]} />
-        <Text
-          position={[-1.56, 0, 2.1]}
-          color={"black"}
-          fontSize={0.1}
-          fontWeight={"bold"}
-        >
-          {`Click Aqui`}
-        </Text>
-        <House3D scale={0.3} rotation={[0, 4.75, 0]} />
-        <Lapras3D scale={0.005} position={[1, -0.5, 1]} rotation={[0, -0.5, 0]} />
-          </Suspense>
-        <OrbitControls
-          maxPolarAngle={Math.PI * 0.4}
-          minPolarAngle={Math.PI * 0.3}
-          maxAzimuthAngle={Math.PI * 0.25}
-          minAzimuthAngle={-Math.PI * 0.25}
-        />
+          <Sign3D onClick={openSignModal} onPointerOver={handlePointerOver} onPointerOut={handlePointerOut} scale={0.02} position={[-1.6, -0.5, 2]} rotation={[0, 0, 0]} />
+          <Text
+            position={[-1.56, 0, 2.1]}
+            color={"black"}
+            fontSize={0.1}
+            fontWeight={"bold"}
+          >
+            {`Click Aqui`}
+          </Text>
+          <House3D scale={0.3} rotation={[0, 4.75, 0]} />
+          <Lapras3D scale={0.005} position={[1, -0.5, 1]} rotation={[0, -0.5, 0]} />
+          <OrbitControls
+            maxPolarAngle={Math.PI * 0.4}
+            minPolarAngle={Math.PI * 0.3}
+            maxAzimuthAngle={Math.PI * 0.25}
+            minAzimuthAngle={-Math.PI * 0.25}
+          />
+        </Suspense>
       </Canvas>
       <Loader />
-      <Raindrop isOpen={isOpen} onClose={closeSignModal}/>
-      </>
+      <Raindrop isOpen={isOpen} onClose={closeSignModal} />
+    </>
   );
 };
 

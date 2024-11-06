@@ -6,31 +6,37 @@ export function Lapras3D(props) {
     <group {...props} dispose={null}>
       <group rotation={[Math.PI / 2, 0, 0]}>
         <primitive object={nodes.pm0131_00} />
-        <skinnedMesh
+        <mesh
           castShadow
+          receiveShadow
           geometry={nodes.mesh_6_BodyATattu01.geometry}
           material={materials.BodyATattu00_mat}
-          skeleton={nodes.mesh_6_BodyATattu01.skeleton}
         />
-        <skinnedMesh
+        <mesh
           castShadow
+          receiveShadow
           geometry={nodes.mesh_6_BodyATattu01_1.geometry}
           material={materials.Eye_mat}
-          skeleton={nodes.mesh_6_BodyATattu01_1.skeleton}
         />
-        <skinnedMesh
+        <mesh
           castShadow
+          receiveShadow
           geometry={nodes.mesh_6_BodyATattu01_2.geometry}
           material={materials.BodyB_mat}
-          skeleton={nodes.mesh_6_BodyATattu01_2.skeleton}
         />
-        <skinnedMesh
+        <mesh
           castShadow
+          receiveShadow
           geometry={nodes.mesh_6_BodyATattu01_3.geometry}
           material={materials.BodyBVco_mat}
-          skeleton={nodes.mesh_6_BodyATattu01_3.skeleton}
         />
       </group>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Icosphere.geometry}
+        material={nodes.Icosphere.material}
+      />
     </group>
   );
 }
