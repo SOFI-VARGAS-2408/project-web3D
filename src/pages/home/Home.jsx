@@ -30,17 +30,12 @@ const Home = () => {
     }
     getEmail()
   }, [user]);
-  const handlelogout = useCallback(() => {
-    logout();
-  }, [logout]);
   const navigate = useNavigate (
 
   )
-  const handleNavigateStart = useCallback ( () => {
+  const handleNavigateStart = useCallback(() => {
     navigate("/Start");
-  }
-
-  ) 
+  }, [navigate])
   return (
     <>
       <ButtonLogOut />
@@ -49,7 +44,6 @@ const Home = () => {
           <h1 className="container-left-welcome">¡Hola! {user.displayName}</h1>
           <p className="container-left-slogan">Bienvenido a innovaVerde,</p>
           <p className="container-left-slogan">"Hasta la ultima gota"</p>
-          {/* <button onClick={handlelogout}>Cerrar Sesion</button> */}
           <Button text={"Iniciar"} onClick={handleNavigateStart}/>
         </div>
         <Canvas>
