@@ -32,10 +32,18 @@ const Router = createBrowserRouter([
         )
     },
     {
-      path:'/Start',
+      path:'/start',
       element:(
         <ProtectedRoute>
            <Start/>
+        </ProtectedRoute>
+        )
+    },
+    {
+      path:'/pollution',
+      element:(
+        <ProtectedRoute>
+           <Pollution />
         </ProtectedRoute>
         )
     }
